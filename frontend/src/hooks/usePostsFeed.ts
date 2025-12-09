@@ -23,8 +23,11 @@ const usePostsFeed = (activeTab: FeedTab, followingUsers: string[]) => {
         setError(null)
         try {
             const response = await api.get<Post[]>("posts/")
-            setPosts(response.data)
+            // Garantir que sempre temos um array
+            const postsData = Array.isArray(response.data) ? response.data : []
+            setPosts(postsData)
         } catch (err: any) {
+            console.error("Erro ao carregar posts:", err)
             setError(err?.response?.data?.detail || "Erro ao carregar posts")
             setPosts([])
         } finally {
