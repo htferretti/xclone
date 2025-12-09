@@ -3,10 +3,10 @@ import { createGlobalStyle } from "styled-components"
 export const colors = {
     black: '#000',
     white: '#c9c9c9',
-    grey: '#3f4549ff',
-    dark: '#272d2eff',
-    purple: '#8a7f8d',
-    blue: '#91a3b0'
+    dark: '#3f4549ff',
+    grayPink: '#6a5e67ff',
+    pink: '#DB0098',
+    darkPink: '#a61079ff'
 }
 
 export const screen_width = {
@@ -15,7 +15,7 @@ export const screen_width = {
     mobile: '428px'
 }
 
-export const MyFuckingGlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
     * {
         padding: 0;
         margin: 0;
