@@ -317,7 +317,7 @@ class AuthViewSet(viewsets.ViewSet):
         except UserProfile.DoesNotExist:
             profile = UserProfile.objects.create(user=request.user)
 
-        print(f"[DEBUG] Saving profile_picture to profile...")
+        print(f"[DEBUG] Saving new profile_picture to profile...")
         profile.profile_picture = profile_picture
         profile.save()
         
