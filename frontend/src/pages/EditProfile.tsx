@@ -173,7 +173,7 @@ const EditProfile = () => {
         }
 
         fetchProfile()
-    }, [refreshUser, user?.username, user?.email, user?.profile?.profile_picture, profilePictureFile])
+    }, [refreshUser, user?.username, user?.email, user?.profile?.profile_picture])
 
     const handleProfilePictureChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0]
